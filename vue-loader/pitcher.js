@@ -1,6 +1,6 @@
 const { stringifyRequest } = require("./utils");
 const stylePostLoader = require.resolve('./style-post-loader');
-
+const isCSSloader = loader=>/css-loader/.test(loader.path)
 const pitcher = code=>code;
 const isNotPitcher =loader=>loader.path!==__filename
 const pitch=function(){

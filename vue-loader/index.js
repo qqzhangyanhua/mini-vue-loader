@@ -40,7 +40,7 @@ function loader(source) {
     });
   }
   if(hasScoped){
-    code.push(`script.__scopeId = data-v-${id}`)
+    code.push(`script.__scopeId = "data-v-${id}" `)
   }
   code.push(`script.render = render`);
   code.push(`export default script`);
